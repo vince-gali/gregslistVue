@@ -75,7 +75,7 @@ export default {
                     window.event.preventDefault()
                     await carsService.createCar(formData)
                     editable.value = {} // NOTE this is the VUE equivalent of form.rest()
-                    bootstrap.Modal.getOrCreateInstance('#create-car').hide() // NOTE close the modal
+                    Modal.getOrCreateInstance('#create-car').hide() // NOTE close the modal
                 } catch (error) {
                     Pop.error(error.message)
                     logger.log(error)
